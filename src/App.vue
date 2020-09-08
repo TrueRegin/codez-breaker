@@ -1,32 +1,56 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <h1 id="title">Hello World</h1>
+        <main role="main" id="content">
+            <Translator v-for="encryption in $encryptions" :key="encryption" :encode="encryption.encode" :decode="encryption.decode">
+                <template v-slot:title>{{encryption.title}}</template>
+            </Translator>
+        </main>
     </div>
-    <router-view/>
-  </div>
 </template>
 
-<style>
+<script>
+import Translator from "./components/Translator.vue";
+export default {
+    components: {
+        Translator,
+    },
+};
+</script>
+
+<style lang="scss">
+html,
+body,
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-#nav {
-  padding: 30px;
+body {
+    margin: 0;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+html {
+    font-size: 16px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+#title {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 9px;
+    color: #3e4385;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0;
+}
+
+#content {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
 }
 </style>

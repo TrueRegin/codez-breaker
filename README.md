@@ -2,18 +2,35 @@
 
 ## Project setup
 ```
+npm run install
+OR
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Run a local development server
 ```
+npm run serve
+OR
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Create a production build to upload
 ```
+npm run build
+OR
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This app uses VueJS and creates a simple Translator component. You can modify `encryptions.js` to add more languages in the future.
+
+Store any new encryption + decryption techniques you create in encryptions and export default an object.
+```ts
+export default {
+    encode: (input: string) => {
+        /** Some sort of code that will ENCODE an input string */
+    },
+    decode: (input: string) => {
+        /** Some sort of code that will DECODE an input string */
+    }
+}
+```

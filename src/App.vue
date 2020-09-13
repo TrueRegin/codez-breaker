@@ -29,6 +29,8 @@ body,
 
 body {
     margin: 0;
+    background: #335;
+    color: #fff;
 }
 
 html {
@@ -41,7 +43,7 @@ html {
     font-size: 2rem;
     text-align: center;
     border-radius: 9px;
-    color: #3e4385;
+    color: #47da84;
     box-sizing: border-box;
     padding: 20px;
     margin: 0;

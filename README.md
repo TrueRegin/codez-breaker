@@ -1,4 +1,9 @@
 # decoder-app
+Decode and encode your messages with 4 awesome code encoders/decoders. ***Cryptic***
+
+![image](https://user-images.githubusercontent.com/36866793/93013128-9189e900-f573-11ea-8c89-b28d6498aa1e.png)
+
+
 
 ## Project setup
 ```
